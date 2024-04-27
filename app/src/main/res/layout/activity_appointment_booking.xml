@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AppointmentBookingActivity">
+
+    <TextView
+        android:id="@+id/doctorName"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="@color/green"
+        android:gravity="center_vertical"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:text="Dr. Alok Kumar"
+        android:textSize="26sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/client_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:minLines="1"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Name"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/green" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/client_age"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:minLines="1"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:background="@drawable/edit_text_bg"
+                android:hint="Age"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/green" />
+
+            <Button
+                android:id="@+id/appointment_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:minLines="1"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Select Date"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/client_mob_no"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:minLines="1"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:background="@drawable/edit_text_bg"
+            android:hint="Contact Number"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/green" />
+
+        <EditText
+            android:id="@+id/client_Email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:minLines="1"
+            android:autofillHints=""
+            android:background="@drawable/edit_text_bg"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/green" />
+
+        <EditText
+            android:id="@+id/client_Address"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:background="@drawable/edit_text_bg"
+            android:gravity="start|top"
+            android:hint="Address"
+            android:inputType="text"
+            android:minLines="3"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/green" />
+
+        <EditText
+            android:id="@+id/client_purpose"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:background="@drawable/edit_text_bg"
+            android:gravity="start|top"
+            android:hint="Purpose"
+            android:inputType="text"
+            android:minLines="3"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            style="@style/ProgressBarColor"
+            android:layout_marginTop="40dp"/>
+
+        <Button
+            android:id="@+id/requestBtn"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:visibility="visible"
+            android:text="Request"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Go Back"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/confirm_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Request Submited"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
